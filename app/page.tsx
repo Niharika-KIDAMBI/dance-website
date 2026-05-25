@@ -1,8 +1,25 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-black text-white">
+      {/* NAVBAR */}
+<nav className="flex justify-between items-center px-8 py-4 border-b border-yellow-500/30 sticky top-0 bg-black z-50">
+  <p className="text-yellow-500 font-bold text-sm tracking-widest uppercase">SGSNK</p>
+  <div className="flex gap-6 text-sm">
+    <Link href="/" className="text-white hover:text-yellow-500 transition">
+      Home
+    </Link>
+    <Link href="/biodata" className="text-white hover:text-yellow-500 transition">
+      Biodata
+    </Link>
+    <Link href="/courses" className="text-white hover:text-yellow-500 transition">
+      Courses
+    </Link>
+  </div>
+</nav>
 
       {/* 🎬 HERO SECTION */}
       <section className="h-screen flex items-center justify-center relative text-center">
@@ -139,6 +156,20 @@ export default function Home() {
           <img src="/gallery4.jpg" className="rounded-lg" />
         </div>
       </section>
+      {/* EXPLORE MORE */}
+<section className="p-10 border-t border-yellow-500/20">
+  <h2 className="text-3xl font-bold text-yellow-500 text-center mb-8">Explore More</h2>
+  <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+    <Link href="/biodata" className="border border-yellow-500 p-6 rounded-xl hover:bg-yellow-500 hover:text-black transition group">
+      <h3 className="text-xl font-bold text-yellow-500 group-hover:text-black">📜 Guru's Biodata</h3>
+      <p className="mt-2 text-gray-400 group-hover:text-black text-sm">Full profile, awards, achievements & student legacy</p>
+    </Link>
+    <Link href="/courses" className="border border-yellow-500 p-6 rounded-xl hover:bg-yellow-500 hover:text-black transition group">
+      <h3 className="text-xl font-bold text-yellow-500 group-hover:text-black">🎓 Our Courses</h3>
+      <p className="mt-2 text-gray-400 group-hover:text-black text-sm">Kuchipudi, Bharatanatyam & more — join us today</p>
+    </Link>
+  </div>
+</section>
 
       {/* 📞 FOOTER */}
       <footer className="text-center p-6 border-t border-gray-700">
