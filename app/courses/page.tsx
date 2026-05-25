@@ -9,9 +9,14 @@ export default function Courses() {
         Courses
       </h1>
 
-      <p className="mt-4">
-        Course details will be updated soon.
-      </p>
+      <a
+  href="https://topmate.io/patnam_sivaprasad"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-6 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition"
+>
+  Enroll Now
+</a>
 
       <Link
         href="/"
